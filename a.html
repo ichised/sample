@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>‰æ–ÊA</title>
+<script>
+	var childWindow;
+
+	function winOpen1() {
+	childWindow = window.open("./b.html", "winB");
+	}
+
+	function winOpen2() {
+	var ret = window.showModalDialog("./c.html");
+	document.getElementById("t1").value = ret;
+	}
+
+	function winCloseB() {
+	childWindow.close();
+	}
+</script>
+</head>
+<body>
+<form name="formA">
+<input type="text" id="t1">
+<input type="button" value="ŠJ‚­(1)" onclick="winOpen1();">
+<input type="button" value="ŠJ‚­(2)" onclick="winOpen2();">
+</form>
+</body>
+</html>
